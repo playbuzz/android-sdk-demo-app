@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExCoPlayerView">
+        <attr format="string" name="playerId"/>
+        <attr format="reference" name="appCategory"/>
+        <attr format="string" name="appCategoryCustom"/>
+        <attr format="string" name="appStoreId"/>
+        <attr format="string" name="appStoreUrl"/>
+        <attr format="integer" name="appVersion"/>
+        <attr format="integer" name="deviceId"/>
+        <attr format="string" name="ifa"/>
+    </declare-styleable>
+</resources>

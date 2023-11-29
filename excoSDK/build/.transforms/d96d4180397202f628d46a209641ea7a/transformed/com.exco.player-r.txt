@@ -1,0 +1,12 @@
+com.exco.player
+attr appCategory
+attr appCategoryCustom
+attr appStoreId
+attr appStoreUrl
+attr appVersion
+attr deviceId
+attr ifa
+attr playerId
+raw js_bridge_listener
+raw license
+styleable ExCoPlayerView appCategory appCategoryCustom appStoreId appStoreUrl appVersion deviceId ifa playerId

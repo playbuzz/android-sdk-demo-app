@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.exco.hosttapp.integration.app-mergeDebugResources-73:/layout/activity_main.xml",
+        "source": "com.exco.hosttapp.integration.app-main-76:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.exco.hosttapp.integration.app-mergeDebugResources-73:/layout/fragment_player_logs.xml",
+        "source": "com.exco.hosttapp.integration.app-main-76:/layout/fragment_player_logs.xml"
+    },
+    {
+        "merged": "com.exco.hosttapp.integration.app-mergeDebugResources-73:/layout/fragment_options.xml",
+        "source": "com.exco.hosttapp.integration.app-main-76:/layout/fragment_options.xml"
+    },
+    {
+        "merged": "com.exco.hosttapp.integration.app-mergeDebugResources-73:/layout/fragment_configuration.xml",
+        "source": "com.exco.hosttapp.integration.app-main-76:/layout/fragment_configuration.xml"
+    }
+]

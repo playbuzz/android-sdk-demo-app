@@ -1,1 +1,2 @@
-# android-sdk-demo-app
+# android-sdk - integration example
+
