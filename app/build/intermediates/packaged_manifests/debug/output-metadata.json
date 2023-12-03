@@ -4,15 +4,15 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.exco.hostapp.integration",
+  "applicationId": "com.exco.hostapp.demo",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.0",
+      "versionCode": 2,
+      "versionName": "DemoApp",
       "outputFile": "AndroidManifest.xml"
     }
   ],

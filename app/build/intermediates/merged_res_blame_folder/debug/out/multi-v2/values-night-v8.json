@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.exco.hosttapp.integration.app-mergeDebugResources-72:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.exco.hostapp.demo.app-mergeDebugResources-72:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/res/values-night/themes.xml",

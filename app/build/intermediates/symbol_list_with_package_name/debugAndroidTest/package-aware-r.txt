@@ -1,0 +1,3 @@
+com.exco.hostapp.demo.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

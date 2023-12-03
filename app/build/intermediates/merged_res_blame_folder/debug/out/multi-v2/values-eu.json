@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.exco.hosttapp.integration.app-mergeDebugResources-72:/values-eu/values-eu.xml",
+            "outputFile": "com.exco.hostapp.demo.app-mergeDebugResources-72:/values-eu/values-eu.xml",
             "map": [
                 {
                     "source": "/Users/olexanderu/.gradle/caches/transforms-3/f45ae76f73cfda9dd094b5fc80304a8f/transformed/play-services-basement-18.1.0/res/values-eu/values.xml",

@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.exco.hostapp.integration",
+  "applicationId": "com.exco.hostapp.demo",
   "variantName": "debug",
   "elements": []
 }

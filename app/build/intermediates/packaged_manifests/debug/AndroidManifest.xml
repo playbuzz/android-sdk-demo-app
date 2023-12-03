@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.exco.hostapp.integration"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.exco.hostapp.demo"
+    android:versionCode="2"
+    android:versionName="DemoApp" >
 
     <uses-sdk
         android:minSdkVersion="26"
@@ -15,10 +15,10 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <permission
-        android:name="com.exco.hostapp.integration.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.exco.hostapp.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.exco.hostapp.integration.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.exco.hostapp.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -32,10 +32,9 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.ExCo" >
         <activity
-            android:name="com.exco.hostapp.integration.MainActivity"
+            android:name="com.exco.hostapp.demo.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,7 +79,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.exco.hostapp.integration.firebaseinitprovider"
+            android:authorities="com.exco.hostapp.demo.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
@@ -114,7 +113,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.exco.hostapp.integration.androidx-startup"
+            android:authorities="com.exco.hostapp.demo.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
@@ -137,7 +136,7 @@
 
         <provider
             android:name="com.exco.player.initProvider.SDKInitProvider"
-            android:authorities="com.exco.hostapp.integration.SDKInitProvider"
+            android:authorities="com.exco.hostapp.demo.SDKInitProvider"
             android:enabled="true"
             android:exported="false"
             android:initOrder="-100" />

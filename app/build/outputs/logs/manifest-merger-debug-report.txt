@@ -215,12 +215,12 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/olexanderu/.gradle/c
 		ADDED from /Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:15:9-69
 	android:dataExtractionRules
 		ADDED from /Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:7:9-65
-activity#com.exco.hostapp.integration.MainActivity
+activity#com.exco.hostapp.demo.MainActivity
 ADDED from /Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:16:9-24:20
 	android:exported
 		ADDED from /Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:18:13-36
 	android:name
-		ADDED from /Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:17:13-69
+		ADDED from /Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:17:13-62
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
@@ -687,7 +687,7 @@ ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transfor
 		ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-permission#com.exco.hostapp.integration.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.exco.hostapp.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
@@ -697,7 +697,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-uses-permission#com.exco.hostapp.integration.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.exco.hostapp.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/AndroidManifest.xml:26:22-94

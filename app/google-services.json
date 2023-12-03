@@ -26,6 +26,25 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:831207412898:android:ec76eefeb51b6c0e86b3fb",
+        "android_client_info": {
+          "package_name": "com.exco.hostapp.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7SjyecE1pxgO55f2OLGfztexAkYj0NzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:831207412898:android:ac1f5b0001d4762886b3fb",
         "android_client_info": {
           "package_name": "com.exco.hostapp.integration"

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.exco.hosttapp.integration.app-mergeDebugResources-72:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "outputFile": "com.exco.hostapp.demo.app-mergeDebugResources-72:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
                     "source": "/Users/olexanderu/.gradle/caches/transforms-3/631929ab46bf2bba94aaa522f9c6eafe/transformed/material-1.9.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",

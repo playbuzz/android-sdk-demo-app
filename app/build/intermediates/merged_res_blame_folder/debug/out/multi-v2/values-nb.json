@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.exco.hosttapp.integration.app-mergeDebugResources-72:/values-nb/values-nb.xml",
+            "outputFile": "com.exco.hostapp.demo.app-mergeDebugResources-72:/values-nb/values-nb.xml",
             "map": [
                 {
                     "source": "/Users/olexanderu/.gradle/caches/transforms-3/7a79b74ceeb2e60df83ff2ea6c1839b7/transformed/core-1.12.0/res/values-nb/values-nb.xml",

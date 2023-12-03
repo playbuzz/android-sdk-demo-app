@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/optionFragment"
-        android:name="com.exco.hostapp.integration.fragments.OptionFragment"
+        android:name="com.exco.hostapp.demo.fragments.OptionFragment"
         android:label="OptionFragment">
         <action
             android:id="@+id/action_optionFragment_to_configurationFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/configurationFragment"
-        android:name="com.exco.hostapp.integration.fragments.ConfigurationFragment"
+        android:name="com.exco.hostapp.demo.fragments.ConfigurationFragment"
         android:label="ConfigurationFragment"
         tools:layout="@layout/fragment_configuration">
         <action
@@ -24,6 +24,6 @@
     </fragment>
     <fragment
         android:id="@+id/playerFragmentLogs"
-        android:name="com.exco.hostapp.integration.fragments.PlayerFragmentWithLogs"
+        android:name="com.exco.hostapp.demo.fragments.PlayerFragmentWithLogs"
         android:label="PlayerFragmentWithLogs" />
 </navigation>

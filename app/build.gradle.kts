@@ -11,18 +11,18 @@ plugins {
 }
 
 android {
-    namespace = "com.exco.hosttapp.integration"
+    namespace = "com.exco.hostapp.demo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.exco.hostapp.integration"
+        applicationId = "com.exco.hostapp.demo"
         minSdk = 26
 
         //noinspection EditedTargetSdkVersion
         targetSdk = 34
 
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "DemoApp"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
