@@ -4,15 +4,15 @@
     "type": "MERGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.exco.hostapp.demo",
+  "applicationId": "com.exco.hostapp.integration",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 2,
-      "versionName": "DemoApp",
+      "versionCode": 15,
+      "versionName": "15",
       "outputFile": "AndroidManifest.xml"
     }
   ],

@@ -3,27 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/optionFragment">
+    app:startDestination="@id/inputOptionsFragment">
 
     <fragment
-        android:id="@+id/optionFragment"
-        android:name="com.exco.hostapp.demo.fragments.OptionFragment"
-        android:label="OptionFragment">
+        android:id="@+id/introductionFragment"
+        android:name="com.exco.hostapp.integration.fragments.IntroductionFragment"
+        android:label="IntroductionFragment" >
         <action
-            android:id="@+id/action_optionFragment_to_configurationFragment"
-            app:destination="@id/configurationFragment" />
+            android:id="@+id/action_introductionFragment_to_configurationFragmentCompose"
+            app:destination="@id/configurationFragmentCompose" />
     </fragment>
     <fragment
-        android:id="@+id/configurationFragment"
-        android:name="com.exco.hostapp.demo.fragments.ConfigurationFragment"
-        android:label="ConfigurationFragment"
-        tools:layout="@layout/fragment_configuration">
+        android:id="@+id/playerFragmentWithScroll"
+        android:name="com.exco.hostapp.integration.fragments.PlayerFragmentWithScroll"
+        android:label="PlayerFragmentWithScroll" />
+    <fragment
+        android:id="@+id/composePlayerWithScroll"
+        android:name="com.exco.hostapp.integration.fragments.ComposePlayerWithScroll"
+        android:label="ComposePlayerWithScroll" />
+    <fragment
+        android:id="@+id/configurationFragmentCompose"
+        android:name="com.exco.hostapp.integration.fragments.ConfigurationFragmentCompose"
+        android:label="ConfigurationFragmentCompose" >
         <action
-            android:id="@+id/action_configurationFragment_to_playerFragmentLogs"
-            app:destination="@id/playerFragmentLogs" />
+            android:id="@+id/action_configurationFragmentCompose_to_playerFragmentWithScroll"
+            app:destination="@id/playerFragmentWithScroll" />
+        <action
+            android:id="@+id/action_configurationFragmentCompose_to_composePlayerWithScroll"
+            app:destination="@id/composePlayerWithScroll" />
     </fragment>
     <fragment
-        android:id="@+id/playerFragmentLogs"
-        android:name="com.exco.hostapp.demo.fragments.PlayerFragmentWithLogs"
-        android:label="PlayerFragmentWithLogs" />
+        android:id="@+id/inputOptionsFragment"
+        android:name="com.exco.hostapp.integration.fragments.InputOptionsFragment"
+        android:label="InputOptionsFragment" >
+        <action
+            android:id="@+id/action_inputOptionsFragment_to_introductionFragment"
+            app:destination="@id/introductionFragment" />
+        <action
+            android:id="@+id/action_inputOptionsFragment_to_playerDefinedFragmentWithScrollMiniplayerNone"
+            app:destination="@id/playerDefinedFragmentWithScrollMiniplayerNone" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerDefinedFragmentWithScrollMiniplayerNone"
+        android:name="com.exco.hostapp.integration.fragments.PlayerDefinedFragmentWithScrollMiniplayerNone"
+        android:label="PlayerDefinedFragmentWithScrollMiniplayerNone" />
 </navigation>

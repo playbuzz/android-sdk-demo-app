@@ -1,4 +1,4 @@
-com.exco.hostapp.demo
+com.exco.hosttapp.integration
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -83,6 +83,7 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array my_categories
 attr SharedValue
 attr SharedValueId
 attr action
@@ -881,6 +882,7 @@ attr minHideDelay
 attr minSeparation
 attr minTouchTargetSize
 attr minWidth
+attr miniPlayer
 attr mock_diagonalsColor
 attr mock_label
 attr mock_labelBackgroundColor
@@ -1390,6 +1392,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3078,6 +3081,7 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id None
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -3129,17 +3133,20 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
-id action_configurationFragment_to_playerFragmentLogs
+id action_configurationFragmentCompose_to_composePlayerWithScroll
+id action_configurationFragmentCompose_to_playerFragmentWithScroll
 id action_container
 id action_context_bar
 id action_divider
 id action_image
+id action_inputOptionsFragment_to_introductionFragment
+id action_inputOptionsFragment_to_playerDefinedFragmentWithScrollMiniplayerNone
+id action_introductionFragment_to_configurationFragmentCompose
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_optionFragment_to_configurationFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3155,10 +3162,6 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
-id app_bundle_et
-id app_bundle_label
-id app_name_et
-id app_name_label
 id arc
 id asConfigured
 id async
@@ -3166,7 +3169,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back_button
+id back_arrow
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3201,14 +3204,13 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id composePlayerWithScroll
 id composeView
 id compose_view_saveable_id_tag
 id compress
-id configurationFragment
-id configuration_form_container
+id configurationFragmentCompose
 id confirm_button
 id constraint
-id constraintLayout
 id consume_window_insets_tag
 id container
 id content
@@ -3252,7 +3254,7 @@ id dragRight
 id dragStart
 id dragUp
 id dropdown_menu
-id dynamic_embedded_exco_player
+id dummy_text_view
 id easeIn
 id easeInOut
 id easeOut
@@ -3266,13 +3268,6 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
-id et_appCategory
-id et_appStoreId
-id et_appStoreUrl
-id et_appVersion
-id et_device_id
-id et_ifa
-id et_player_id
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3319,7 +3314,9 @@ id immediateStop
 id included
 id indeterminate
 id info
+id inputOptionsFragment
 id inspection_slot_table_set
+id introductionFragment
 id invisible
 id inward
 id is_pooling_container_tag
@@ -3335,10 +3332,8 @@ id legacy
 id line1
 id line3
 id linear
-id linearView
 id listMode
 id list_item
-id load_player_button
 id locale
 id ltr
 id m3_side_sheet
@@ -3426,7 +3421,6 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
-id optionFragment
 id outline
 id outward
 id overshoot
@@ -3442,8 +3436,9 @@ id pathRelative
 id peekHeight
 id percent
 id pin
-id playerFragmentLogs
-id player_id_label
+id player
+id playerDefinedFragmentWithScrollMiniplayerNone
+id playerFragmentWithScroll
 id pooling_container_listener_holder_tag
 id position
 id postLayout
@@ -3467,7 +3462,7 @@ id save_overlay_view
 id sawtooth
 id scale
 id screen
-id screen_title
+id screen_name
 id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -3586,13 +3581,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_Logs
-id tv_appCategory
-id tv_appStoreId
-id tv_appStoreUrl
-id tv_appVersion
-id tv_device_id
-id tv_ifa
 id unchecked
 id uniform
 id unlabeled
@@ -3749,9 +3737,15 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_configuration
-layout fragment_options
-layout fragment_player_logs
+layout fragment_banner_options
+layout fragment_compose_configuration
+layout fragment_compose_player
+layout fragment_corner_options
+layout fragment_defined_manual
+layout fragment_defined_player_none
+layout fragment_introduction
+layout fragment_mini_player_types
+layout fragment_player_scroll
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -3820,7 +3814,6 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
-raw firebase_common_keep
 raw js_bridge_listener
 raw license
 string abc_action_bar_home_description
@@ -3885,7 +3878,6 @@ string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
 string collapsed
-string com_google_firebase_crashlytics_mapping_file_id
 string common_google_play_services_unknown_issue
 string date_input_headline
 string date_input_headline_description
@@ -3929,11 +3921,6 @@ string expanded
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string gcm_defaultSenderId
-string google_api_key
-string google_app_id
-string google_crash_reporting_api_key
-string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string ifa
@@ -4055,7 +4042,6 @@ string path_password_strike_through
 string placeholder_string
 string player_configuration
 string player_id
-string project_id
 string range_end
 string range_start
 string search_bar_search
@@ -5246,7 +5232,7 @@ styleable CustomAttribute attributeName customBoolean customColorDrawableValue c
 styleable DialogFragmentNavigator android_name
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable DrawerLayout elevation
-styleable ExCoPlayerView appCategory appCategoryCustom appStoreId appStoreUrl appVersion deviceId ifa playerId
+styleable ExCoPlayerView appCategory appCategoryCustom appStoreId appStoreUrl appVersion deviceId ifa miniPlayer playerId
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec extendStrategy hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding

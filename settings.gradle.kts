@@ -1,21 +1,25 @@
 pluginManagement {
     repositories {
-        mavenLocal()
-        google()
         mavenCentral()
-        gradlePluginPortal()
+        google()
+        maven(url = "https://plugins.gradle.org/m2/")
+        maven {
+            url = uri("https://exco1.jfrog.io/artifactory/android-gradle-release/")
+        }
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        mavenLocal()
-        google()
         mavenCentral()
+        google()
+        maven(url = "https://plugins.gradle.org/m2/")
+        maven {
+            url = uri("https://exco1.jfrog.io/artifactory/android-gradle-release/")
+        }
     }
 }
 
 rootProject.name = "ExCo-Integration"
 include(":app")
-include(":excoSDK")
-include(":omidSDK")

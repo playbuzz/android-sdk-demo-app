@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <array name="my_categories" tools:ignore="MissingDefaultResource">
+        <item>Sport</item>
+        <item>VideoGame</item>
+        <item>Food</item>
+    </array>
+</resources>

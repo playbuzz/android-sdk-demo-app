@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.exco.hostapp.demo.app-mergeDebugResources-72:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.exco.hosttapp.integration.app-mergeDebugResources-68:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/olexanderu/.gradle/caches/transforms-3/631929ab46bf2bba94aaa522f9c6eafe/transformed/material-1.9.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/olexanderu/.gradle/caches/transforms-3/7946891045c9997f2f04046ce05c5762/transformed/material-1.9.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/olexanderu/.gradle/caches/transforms-3/4acafe838a1c37750fc3abe1e50e9767/transformed/appcompat-1.6.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/olexanderu/.gradle/caches/transforms-3/5ae9f396bcd9d0244d637a78bc598e15/transformed/appcompat-1.6.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

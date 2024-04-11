@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.exco.hostapp.demo.test",
+  "applicationId": "com.exco.hostapp.integration.test",
   "variantName": "debugAndroidTest",
   "elements": [
     {

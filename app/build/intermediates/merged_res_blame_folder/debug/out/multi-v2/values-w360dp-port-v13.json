@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.exco.hostapp.demo.app-mergeDebugResources-72:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.exco.hosttapp.integration.app-mergeDebugResources-68:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/olexanderu/.gradle/caches/transforms-3/631929ab46bf2bba94aaa522f9c6eafe/transformed/material-1.9.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "/Users/olexanderu/.gradle/caches/transforms-3/7946891045c9997f2f04046ce05c5762/transformed/material-1.9.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

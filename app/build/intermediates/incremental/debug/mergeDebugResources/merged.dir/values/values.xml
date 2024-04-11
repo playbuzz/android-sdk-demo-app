@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
+    <array name="my_categories" ns1:ignore="MissingDefaultResource">
+        <item>Sport</item>
+        <item>VideoGame</item>
+        <item>Food</item>
+    </array>
     <attr format="enum" name="animateCircleAngleTo">
         <enum name="bestChoice" value="0"/>
         <enum name="closest" value="1"/>
@@ -645,6 +650,7 @@
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="black">#FF000000</color>
+    <color name="blue">#FF12339A</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -2001,7 +2007,6 @@
     <string name="close_drawer">"Close navigation menu"</string>
     <string name="close_sheet">"Close sheet"</string>
     <string name="collapsed">Collapsed</string>
-    <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
     <string name="common_google_play_services_unknown_issue"><ns2:g id="app_name">%1$s</ns2:g> is having trouble with Google Play services. Please try again.</string>
     <string name="date_input_headline">Entered date</string>
     <string name="date_input_headline_description">Entered date: %1$s</string>
@@ -2051,11 +2056,6 @@
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
-    <string name="gcm_defaultSenderId" translatable="false">831207412898</string>
-    <string name="google_api_key" translatable="false">AIzaSyD7SjyecE1pxgO55f2OLGfztexAkYj0NzU</string>
-    <string name="google_app_id" translatable="false">1:831207412898:android:ec76eefeb51b6c0e86b3fb</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD7SjyecE1pxgO55f2OLGfztexAkYj0NzU</string>
-    <string name="google_storage_bucket" translatable="false">exco-487cd.appspot.com</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="ifa" translatable="false">IFA</string>
@@ -2183,7 +2183,6 @@
     <string name="placeholder_string" translatable="false">Placeholder string</string>
     <string name="player_configuration" translatable="false">Player Configuration</string>
     <string name="player_id" translatable="false">Player ID</string>
-    <string name="project_id" translatable="false">exco-487cd</string>
     <string name="range_end">"Range end"</string>
     <string name="range_start">"Range start"</string>
     <string name="search_bar_search">Search</string>
@@ -11279,6 +11278,15 @@
         <attr format="integer" name="appVersion"/>
         <attr format="integer" name="deviceId"/>
         <attr format="string" name="ifa"/>
+        <attr name="miniPlayer">
+            <enum name="None" value="-1"/>
+<!--            <enum name="CornerTopRight" value="0" />-->
+<!--            <enum name="CornerTopLeft" value="1" />-->
+<!--            <enum name="CornerBottomRight" value="2" />-->
+<!--            <enum name="CornerBottomLeft" value="3" />-->
+<!--            <enum name="BannerTop" value="4" />-->
+<!--            <enum name="BannerBottom" value="5" />-->
+        </attr>
     </declare-styleable>
     <declare-styleable name="ExtendedFloatingActionButton">
     
