@@ -30,49 +30,49 @@
 19-->[com.exco:omsdk-android:1.4.8] /Users/olexanderu/.gradle/caches/transforms-3/c24cdf47387cf328754fcf24c7f6813c/transformed/omsdk-android-1.4.8/AndroidManifest.xml:10:22-76
 20
 21    <application
-21-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:5:5-27:19
+21-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:5:5-27:19
 22        android:name="com.exco.hostapp.integration.fragments.DemoApplication"
-22-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:6:9-78
+22-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:6:9-78
 23        android:allowBackup="true"
-23-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:7:9-35
+23-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:7:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 24-->[androidx.core:core:1.12.0] /Users/olexanderu/.gradle/caches/transforms-3/a075ff983da3786ad29430690b7f8684/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 25        android:dataExtractionRules="@xml/data_extraction_rules"
-25-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:8:9-65
+25-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:8:9-65
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
 28        android:fullBackupContent="@xml/backup_rules"
-28-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:9:9-54
+28-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:9:9-54
 29        android:icon="@mipmap/ic_launcher"
-29-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:10:9-43
+29-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:10:9-43
 30        android:label="@string/app_name"
-30-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:11:9-41
+30-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:11:9-41
 31        android:networkSecurityConfig="@xml/network_security_config"
-31-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:16:9-69
+31-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:16:9-69
 32        android:roundIcon="@mipmap/ic_launcher_round"
-32-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:12:9-54
+32-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:12:9-54
 33        android:supportsRtl="true"
-33-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:13:9-35
+33-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:13:9-35
 34        android:testOnly="true"
 35        android:theme="@style/Theme.ExCo" >
-35-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:14:9-42
+35-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:14:9-42
 36        <activity
-36-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:17:9-26:20
+36-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:17:9-26:20
 37            android:name="com.exco.hostapp.integration.MainActivity"
-37-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:19:13-69
+37-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:19:13-69
 38            android:configChanges="orientation|screenSize"
-38-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:18:13-59
+38-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:18:13-59
 39            android:exported="true" >
-39-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:20:13-36
+39-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:20:13-36
 40            <intent-filter>
-40-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:21:13-25:29
+40-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:21:13-25:29
 41                <action android:name="android.intent.action.MAIN" />
-41-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:22:17-69
-41-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:22:25-66
+41-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:22:17-69
+41-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:22:25-66
 42
 43                <category android:name="android.intent.category.LAUNCHER" />
-43-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:24:17-77
-43-->/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/src/main/AndroidManifest.xml:24:27-74
+43-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:24:17-77
+43-->/Users/olexanderu/Desktop/android-sdk-demo-app/app/src/main/AndroidManifest.xml:24:27-74
 44            </intent-filter>
 45        </activity>
 46

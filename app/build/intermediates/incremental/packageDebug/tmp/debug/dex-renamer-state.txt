@@ -1,14 +1,14 @@
-#Thu Apr 11 12:24:50 IDT 2024
-base.0=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
-base.4=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
-base.5=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
-base.6=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.7=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
-base.8=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
-base.9=/Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+#Thu Apr 11 12:47:30 IDT 2024
+base.0=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
+base.4=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
+base.5=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
+base.6=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+base.7=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
+base.8=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
+base.9=/Users/olexanderu/Desktop/android-sdk-demo-app/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex
