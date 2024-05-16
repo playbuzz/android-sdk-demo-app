@@ -43,4 +43,12 @@ object TextUtils {
                 Aenean et tortor at risus viverra adipiscing at. Senectus et netus et malesuada. Eros donec ac odio tempor. Sed odio morbi quis commodo odio aenean. Et malesuada fames ac turpis egestas. Augue mauris augue neque gravida in fermentum et.
                 Ullamcorper malesuada proin libero nunc consequat interdum varius. Mi proin sed libero enim sed faucibus turpis in eu. Enim lobortis scelerisque fermentum dui.
             """.trimIndent()
+
+    val SHORT_DUMMY_TEXT =
+        """     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum. Nullam non nisi est sit amet facilisis magna etiam.
+                Lacinia quis vel eros donec ac odio tempor orci dapibus. Tempor orci dapibus ultrices in iaculis nunc sed augue. Aliquet nibh praesent tristique magna sit amet purus.
+                Cursus risus at ultrices mi tempus imperdiet nulla. At tempor commodo ullamcorper a lacus vestibulum sed arcu non. Mauris ultrices eros in cursus. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+                Vitae congue mauris rhoncus aenean. Iaculis nunc sed augue lacus viverra vitae. Tincidunt vitae semper quis lectus nulla at volutpat. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus.
+                Suscipit tellus mauris a diam maecenas sed enim. Et odio pellentesque diam volutpat. Nec sagittis aliquam malesuada bibendum arcu. Bibendum ut tristique et egestas quis.
+            """.trimIndent()
 }

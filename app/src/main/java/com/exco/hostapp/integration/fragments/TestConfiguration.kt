@@ -17,7 +17,7 @@ object TestConfiguration {
      * Test configuration for use in testing scenarios.
      */
     val configuration = PlayerConfiguration(
-        playerId = TEST_PLAYER_ID,
+        playerId = "28b907db-50ab-433d-bf84-4da2d60824bc", //TEST_PLAYER_ID,
         appCategory = TEST_APP_CATEGORY,
         appStoreId = TEST_APP_STORE_ID,
         appStoreUrl = TEST_APP_STORE_URL,
