@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.exco.player.views.ExCoPlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:appStoreId="5"
+        app:appStoreUrl="https://appStoreUrl"
+        app:appVersion="5"
+        app:deviceId="5"
+        app:ifa="ifaLink"
+        app:miniPlayer="None"
+        app:playerId="8bd39116-eacb-4b4e-a160-bedd5d71ce1c" />
+</FrameLayout>
