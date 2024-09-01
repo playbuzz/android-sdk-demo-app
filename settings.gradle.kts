@@ -18,6 +18,7 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://exco1.jfrog.io/artifactory/android-gradle-release/")
         }
+        mavenLocal()
     }
 }
 

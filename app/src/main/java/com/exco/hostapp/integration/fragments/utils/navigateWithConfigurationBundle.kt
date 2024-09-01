@@ -4,6 +4,7 @@ import androidx.annotation.IdRes
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import com.exco.hostapp.integration.util.Constants
+import com.exco.player.configuration.MiniPlayerConfiguration
 import com.exco.player.configuration.MiniPlayerType
 import com.exco.player.configuration.PlayerConfiguration
 
@@ -26,7 +27,7 @@ fun NavController.navigateWithFinalConfigurationBundle(
         appVersion,
         appDeviceId,
         ifa,
-        miniPlayerType = MiniPlayerType.NONE
+        MiniPlayerConfiguration()
     )
     val payloadBundle = bundleOf(
         Constants.CONFIG_BUNDLE_KEY to configuration

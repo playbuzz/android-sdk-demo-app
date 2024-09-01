@@ -36,13 +36,15 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.exco.hostapp.integration.fragments.utils.navigateWithFinalConfigurationBundle
 import com.exco.hostapp.integration.fragments.views.TopNavigation
 import com.exco.hostapp.integration.theme.MyApplicationTheme
 import com.exco.hostapp.integration.util.Constants
 import com.exco.hosttapp.integration.R
+import com.exco.player.configuration.MiniPlayerConfiguration
+import com.exco.player.configuration.PlayerConfiguration
 
 class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configuration) {
 
@@ -66,10 +68,11 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
         ) {
             var playerId by rememberSaveable { mutableStateOf(TestConfiguration.configuration.playerId) }
             var appCategory by rememberSaveable { mutableStateOf<String?>(null) }
+            var appStoreId by rememberSaveable { mutableStateOf<String?>(null) }
             var appStoreUrl by rememberSaveable { mutableStateOf<String?>(null) }
             var appVersion by rememberSaveable { mutableStateOf<String?>(null) }
             var appDevices by rememberSaveable{ mutableStateOf<String?>(null) }
-            var ifa by rememberSaveable { mutableStateOf<String?>(IfaUtils.ifa) }
+            var ifa by rememberSaveable { mutableStateOf(IfaUtils.ifa) }
 
             Column(
                 verticalArrangement = Arrangement.Top,
@@ -126,6 +129,16 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                     }
                     item {
                         InputCard(
+                            "App Store ID",
+                            "Enter your app's store id",
+                            appStoreId,
+                            false
+                        ) {
+                            appStoreId = it
+                        }
+                    }
+                    item {
+                        InputCard(
                             "App Store URL",
                             "Enter your app's store url",
                             appStoreUrl,
@@ -167,19 +180,21 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                     item {
                         Button(
                             onClick = {
-                                val bundle = requireArguments()
-                                val ui_type = bundle.getInt(Constants.UI_TYPE)
-
-                                navController.navigateWithFinalConfigurationBundle(
-                                    composeDestination = R.id.action_configurationFragmentCompose_to_composePlayerWithScroll,
-                                    xmlDestination = R.id.action_configurationFragmentCompose_to_playerFragmentWithScroll,
-                                    appVersion = appVersion,
+                                val configurations = PlayerConfiguration(
                                     playerId = playerId,
                                     appCategory = appCategory,
-                                    appDeviceId = appDevices,
+                                    appStoreId = appStoreId,
                                     appStoreUrl = appStoreUrl,
+                                    appVersion = appVersion,
+                                    deviceId = appDevices,
                                     ifa = ifa,
-                                    ui_type = ui_type
+                                    miniPlayerConfiguration = MiniPlayerConfiguration(),
+                                    isProgrammatic = false
+                                )
+
+                                navController.navigate(
+                                    R.id.action_configurationFragmentCompose_to_uiMethodFragment,
+                                    bundleOf(Constants.CONFIG_BUNDLE_KEY to configurations)
                                 )
                             },
                             modifier = Modifier

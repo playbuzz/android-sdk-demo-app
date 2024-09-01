@@ -6,6 +6,7 @@ import com.exco.player.views.AdMetadata
 import com.exco.player.views.ExCoPlayerDelegate
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -82,6 +83,10 @@ class SampleXmlLogger(private val logger: Logger) : ExCoPlayerDelegate {
 
     override fun playerExitFullScreen() {
         logger.log("playerExitFullScreen")
+    }
+
+    override fun genericEvent(payload: JSONObject) {
+        logger.log("genericEvent")
     }
 }
 interface Logger {

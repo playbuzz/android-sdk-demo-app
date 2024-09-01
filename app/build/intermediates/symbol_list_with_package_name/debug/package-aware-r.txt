@@ -239,6 +239,7 @@ attr buttonIconDimen
 attr buttonIconTint
 attr buttonIconTintMode
 attr buttonPanelSideLayout
+attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
@@ -298,6 +299,7 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
 attr circularflow_angles
@@ -372,6 +374,7 @@ attr colorPrimaryFixedDim
 attr colorPrimaryInverse
 attr colorPrimarySurface
 attr colorPrimaryVariant
+attr colorScheme
 attr colorSecondary
 attr colorSecondaryContainer
 attr colorSecondaryFixed
@@ -657,6 +660,8 @@ attr iconifiedByDefault
 attr ifTagNotSet
 attr ifTagSet
 attr ifa
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr imagePanX
 attr imagePanY
@@ -671,10 +676,13 @@ attr indicatorInset
 attr indicatorSize
 attr initialActivityCount
 attr insetForeground
+attr isCloseButtonPersistence
 attr isLightTheme
 attr isMaterial3DynamicColorApplied
 attr isMaterial3Theme
 attr isMaterialTheme
+attr isProgrammatic
+attr isWithCloseButton
 attr itemActiveIndicatorStyle
 attr itemBackground
 attr itemFillColor
@@ -1037,6 +1045,7 @@ attr roundPercent
 attr route
 attr saturation
 attr scaleFromTextSize
+attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -1064,6 +1073,7 @@ attr shapeAppearanceOverlay
 attr shapeAppearanceSmallComponent
 attr shapeCornerFamily
 attr shortcutMatchRequired
+attr shouldPauseOnClose
 attr shouldRemoveExpandedCorners
 attr showAnimationBehavior
 attr showAsAction
@@ -1407,6 +1417,17 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -2973,11 +2994,32 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3074,10 +3116,17 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable white_arrow_bg
+drawable xmark_circle_fill__1_
 id ALT
 id BOTTOM_END
 id BOTTOM_START
+id BannerBottom
+id BannerTop
 id CTRL
+id CornerBottomLeft
+id CornerBottomRight
+id CornerTopLeft
+id CornerTopRight
 id FUNCTION
 id META
 id NO_DEBUG
@@ -3133,24 +3182,27 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
-id action_configurationFragmentCompose_to_composePlayerWithScroll
-id action_configurationFragmentCompose_to_playerFragmentWithScroll
+id action_configurationFragmentCompose_to_uiMethodFragment
 id action_container
 id action_context_bar
 id action_divider
+id action_homeFragment_to_configurationFragmentCompose
+id action_homeFragment_to_uiMethodFragment
 id action_image
-id action_inputOptionsFragment_to_introductionFragment
-id action_inputOptionsFragment_to_playerDefinedFragmentWithScrollMiniplayerNone
-id action_introductionFragment_to_configurationFragmentCompose
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
+id action_uiMethodFragment_to_composePlayerWithScroll
+id action_uiMethodFragment_to_playerFragmentWithRecycler
+id action_uiMethodFragment_to_playerFragmentWithScroll
 id actions
 id activity_chooser_view_content
 id add
+id adjust_height
+id adjust_width
 id alertTitle
 id aligned
 id all
@@ -3225,6 +3277,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id dark
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3302,10 +3355,12 @@ id hide_in_inspector_tag
 id hideable
 id home
 id homeAsUp
+id homeFragment
 id honorRequest
 id horizontal_only
 id icon
 id icon_group
+id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3314,9 +3369,7 @@ id immediateStop
 id included
 id indeterminate
 id info
-id inputOptionsFragment
 id inspection_slot_table_set
-id introductionFragment
 id invisible
 id inward
 id is_pooling_container_tag
@@ -3326,9 +3379,11 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layout_id
 id left
 id leftToRight
 id legacy
+id light
 id line1
 id line3
 id linear
@@ -3437,8 +3492,9 @@ id peekHeight
 id percent
 id pin
 id player
-id playerDefinedFragmentWithScrollMiniplayerNone
+id playerFragmentWithRecycler
 id playerFragmentWithScroll
+id player_id_label
 id pooling_container_listener_holder_tag
 id position
 id postLayout
@@ -3448,6 +3504,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id report_drawn
 id reverseSawtooth
 id right
@@ -3556,6 +3613,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3581,6 +3639,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id uiMethodFragment
 id unchecked
 id uniform
 id unlabeled
@@ -3596,6 +3655,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id west
+id wide
 id withText
 id with_icon
 id withinBounds
@@ -3741,13 +3801,16 @@ layout fragment_banner_options
 layout fragment_compose_configuration
 layout fragment_compose_player
 layout fragment_corner_options
-layout fragment_defined_manual
 layout fragment_defined_player_none
-layout fragment_introduction
+layout fragment_home
 layout fragment_mini_player_types
+layout fragment_player_recycler
 layout fragment_player_scroll
+layout fragment_ui_method
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_exco_player
+layout item_text
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3878,7 +3941,24 @@ string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
 string collapsed
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
 string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
 string date_input_headline
 string date_input_headline_description
 string date_input_invalid_for_pattern
@@ -5232,7 +5312,7 @@ styleable CustomAttribute attributeName customBoolean customColorDrawableValue c
 styleable DialogFragmentNavigator android_name
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable DrawerLayout elevation
-styleable ExCoPlayerView appCategory appCategoryCustom appStoreId appStoreUrl appVersion deviceId ifa miniPlayer playerId
+styleable ExCoPlayerView appCategory appCategoryCustom appStoreId appStoreUrl appVersion deviceId ifa isCloseButtonPersistence isProgrammatic isWithCloseButton miniPlayer playerId shouldPauseOnClose
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec extendStrategy hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
@@ -5261,6 +5341,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogButtonSpacerVisibility materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType android_popupElevation simpleItemLayout simpleItemSelectedColor simpleItemSelectedRippleColor simpleItems
@@ -5318,6 +5399,7 @@ styleable SearchView android_textAppearance android_focusable android_maxWidth a
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
 styleable SideSheetBehavior_Layout android_maxWidth android_maxHeight android_elevation backgroundTint behavior_draggable coplanarSiblingViewId shapeAppearance shapeAppearanceOverlay
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle minTouchTargetSize thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickRadiusActive tickRadiusInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth shapeAppearance shapeAppearanceOverlay

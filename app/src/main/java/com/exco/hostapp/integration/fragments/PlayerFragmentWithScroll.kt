@@ -39,13 +39,11 @@ class PlayerFragmentWithScroll : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bundle = requireArguments()
-
         configuration = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            bundle.getParcelable(Constants.CONFIG_BUNDLE_KEY, PlayerConfiguration::class.java)
+            arguments?.getParcelable(Constants.CONFIG_BUNDLE_KEY, PlayerConfiguration::class.java)
         } else {
             @Suppress("DEPRECATION")
-            bundle.getParcelable(Constants.CONFIG_BUNDLE_KEY)
+            arguments?.getParcelable(Constants.CONFIG_BUNDLE_KEY)
         } ?: TestConfiguration.configuration
 
         setupPlayer()
