@@ -1,3 +1,0 @@
-com.exco.hosttapp.integration.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

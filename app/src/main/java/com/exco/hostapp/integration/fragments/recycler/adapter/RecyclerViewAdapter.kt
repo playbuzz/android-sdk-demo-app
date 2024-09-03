@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.exco.hosttapp.integration.R
+import com.exco.hostapp.integration.R
 import com.exco.player.views.ExCoAdapter
 
 class RecyclerViewAdapter(private val dataList: List<ViewData>) : ExCoAdapter<ViewHolder>() {

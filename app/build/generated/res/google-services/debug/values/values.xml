@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">831207412898</string>
-    <string name="google_api_key" translatable="false">AIzaSyD7SjyecE1pxgO55f2OLGfztexAkYj0NzU</string>
-    <string name="google_app_id" translatable="false">1:831207412898:android:ac1f5b0001d4762886b3fb</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD7SjyecE1pxgO55f2OLGfztexAkYj0NzU</string>
-    <string name="google_storage_bucket" translatable="false">exco-487cd.appspot.com</string>
-    <string name="project_id" translatable="false">exco-487cd</string>
-</resources>

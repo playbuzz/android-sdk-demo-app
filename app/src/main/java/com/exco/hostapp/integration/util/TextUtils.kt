@@ -43,6 +43,7 @@ object TextUtils {
                 Aenean et tortor at risus viverra adipiscing at. Senectus et netus et malesuada. Eros donec ac odio tempor. Sed odio morbi quis commodo odio aenean. Et malesuada fames ac turpis egestas. Augue mauris augue neque gravida in fermentum et.
                 Ullamcorper malesuada proin libero nunc consequat interdum varius. Mi proin sed libero enim sed faucibus turpis in eu. Enim lobortis scelerisque fermentum dui.
             """.trimIndent()
+
     val SHORT_DUMMY_TEXT =
         """     ********************************
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum. Nullam non nisi est sit amet facilisis magna etiam.

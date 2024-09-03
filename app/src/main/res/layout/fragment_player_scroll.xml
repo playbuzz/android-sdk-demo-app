@@ -56,7 +56,7 @@
             android:id="@+id/screen_name"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="XML Screen"
+            android:text="@string/xml_scrollview_screen"
             android:textSize="20sp"
             android:gravity="center"
             android:textColor="@color/white"

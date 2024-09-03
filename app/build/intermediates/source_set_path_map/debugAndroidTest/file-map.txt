@@ -1,6 +1,0 @@
-com.exco.hosttapp.integration.test.app-core-1.5.0-0 /Users/olexanderu/.gradle/caches/transforms-3/25805aeab2fa3a449fb3804b7635fc5c/transformed/core-1.5.0/res
-com.exco.hosttapp.integration.test.app-annotation-experimental-1.3.0-1 /Users/olexanderu/.gradle/caches/transforms-3/ffd25cfa9b61971086ed16d2346acf44/transformed/annotation-experimental-1.3.0/res
-com.exco.hosttapp.integration.test.app-androidTest-2 /Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/generated/res/resValues/androidTest/debug
-com.exco.hosttapp.integration.test.app-mergeDebugAndroidTestResources-3 /Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.exco.hosttapp.integration.test.app-mergeDebugAndroidTestResources-4 /Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.exco.hosttapp.integration.test.app-merged_res-5 /Users/olexanderu/Desktop/ExCoProject/ExCoSDK-Integration/app/build/intermediates/merged_res/debugAndroidTest

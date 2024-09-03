@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.exco.player.configuration.PlayerConfiguration
-import com.exco.hostapp.integration.util.Constants
+import androidx.navigation.fragment.navArgs
 import com.exco.hostapp.integration.util.TextUtils
-import com.exco.hosttapp.integration.databinding.FragmentPlayerScrollBinding
+import com.exco.hostapp.integration.databinding.FragmentPlayerScrollBinding
+import com.exco.hostapp.integration.util.Constants
+import com.exco.player.configuration.PlayerConfiguration
 
 class PlayerFragmentWithScroll : Fragment() {
 
@@ -49,10 +50,9 @@ class PlayerFragmentWithScroll : Fragment() {
         setupPlayer()
     }
 
-    private fun setupPlayer() =
-        with(binding) {
-            player.loadPlayer(configuration)
-        }
+    private fun setupPlayer() = with(binding) {
+        player.loadPlayer(configuration)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

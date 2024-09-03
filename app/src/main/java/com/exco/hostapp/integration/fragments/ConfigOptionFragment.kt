@@ -1,14 +1,13 @@
 package com.exco.hostapp.integration.fragments
 
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -29,12 +28,13 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.exco.hostapp.integration.R
+import com.exco.hostapp.integration.fragments.composables.TopNavigation
 import com.exco.hostapp.integration.fragments.composables.UISelectionTypeCard
 import com.exco.hostapp.integration.theme.MyApplicationTheme
 import com.exco.hostapp.integration.util.Constants
 import com.exco.hostapp.integration.util.UiMethod
 
-class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
+class ConfigOptionFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -47,9 +47,9 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
     }
 
     @Composable
-    private fun IntroductionScreen() {
+    fun IntroductionScreen(modifier: Modifier = Modifier) {
         Surface(
-            modifier = Modifier.fillMaxSize(),
+            modifier = modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
             Column(
@@ -57,6 +57,10 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
                 horizontalAlignment = Alignment.Start,
                 modifier = Modifier.fillMaxSize()
             ) {
+                TopNavigation(
+                    screenName = "Configuration Options",
+                    navController = findNavController()
+                )
                 IntroductionArea()
                 SelectionCard()
             }
@@ -64,21 +68,25 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
     }
 
     @Composable
-    private fun SelectionCard(
-        modifier: Modifier = Modifier,
-    ) {
+    private fun SelectionCard(modifier: Modifier = Modifier) {
+        val uiMethod = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            requireArguments().getSerializable(Constants.UI_METHOD, UiMethod::class.java)
+        } else {
+            @Suppress("DEPRECATION")
+            requireArguments().getSerializable(Constants.CONFIG_BUNDLE_KEY)
+        } as UiMethod
+
         Card(
             modifier = modifier
                 .fillMaxSize()
                 .padding(top = 24.dp)
-                .verticalScroll(rememberScrollState())
                 .shadow(
                     elevation = 32.dp,
-                    clip = true,
                     shape = RoundedCornerShape(
                         topStart = 32.dp,
                         topEnd = 32.dp
-                    )
+                    ),
+                    clip = true
                 ),
             shape = RoundedCornerShape(
                 topStart = 32.dp,
@@ -93,29 +101,31 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
         ) {
             UISelectionDescription()
             UISelectionTypeCard(
-                selectionName = "XML - ScrollView",
-                selectionAbout = "The screen will be created from xml layout using ScrollView."
+                selectionName = "Predefined",
+                selectionAbout = "PlayerConfiguration defined in XML attributes."
             ) {
-                navigateForward(UiMethod.ScrollView)
+                when (uiMethod) {
+                    UiMethod.ScrollView -> {
+                        findNavController().navigate(R.id.configOptionFragmentToPlayerFragmentWithScroll)
+                    }
+                    UiMethod.RecyclerView -> {
+                        findNavController().navigate(R.id.configOptionFragmentToPlayerFragmentWithRecycler)
+                    }
+                    UiMethod.Compose -> {
+                        findNavController().navigate(R.id.configOptionFragmentToComposePlayerWithScroll)
+                    }
+                }
             }
             UISelectionTypeCard(
-                selectionName = "XML - RecyclerView",
-                selectionAbout = "The screen will be created from xml layout using RecyclerView."
+                selectionName = "Manual",
+                selectionAbout = "PlayerConfiguration needs to be defined and passed with a function loadPlayer()."
             ) {
-                navigateForward(UiMethod.RecyclerView)
-            }
-            UISelectionTypeCard(
-                selectionName = "Compose",
-                selectionAbout = "The screen will be created with Jetpack Compose UI"
-            ) {
-                navigateForward(UiMethod.Compose)
+                findNavController().navigate(
+                    R.id.toConfigurationFragment,
+                    bundleOf(Constants.UI_METHOD to uiMethod)
+                )
             }
         }
-    }
-
-    private fun navigateForward(uiMethod: UiMethod) {
-        val bundle = bundleOf(Constants.UI_METHOD to uiMethod)
-        findNavController().navigate(R.id.toConfigOptionFragment, bundle)
     }
 
     @Composable
@@ -127,7 +137,7 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
             )
         ) {
             Text(
-                text = "Hey\uD83D\uDC4B",
+                text = "Let's go",
                 color = Color(0xFF12339A),
                 fontSize = 20.sp,
                 fontFamily = FontFamily.Default,
@@ -135,7 +145,7 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
                 fontWeight = FontWeight.W600
             )
             Text(
-                text = "Welcome to Exco App",
+                text = "Move forward with options",
                 color = Color.Black,
                 fontSize = 18.sp,
                 fontFamily = FontFamily.Default,
@@ -154,7 +164,7 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
             )
         ) {
             Text(
-                text = "UI method selection",
+                text = "Configuration Input selection",
                 color = Color.Black,
                 fontSize = 18.sp,
                 fontFamily = FontFamily.Default,
@@ -162,7 +172,7 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
                 fontWeight = FontWeight.W600
             )
             Text(
-                text = "Select Your preferred UI method",
+                text = "Select Your preferred Configuration Input method",
                 color = Color.Black,
                 fontSize = 18.sp,
                 fontFamily = FontFamily.Default,

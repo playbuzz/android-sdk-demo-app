@@ -1,7 +1,6 @@
 package com.exco.hostapp.integration.fragments
 
 import com.exco.player.configuration.MiniPlayerConfiguration
-import com.exco.player.configuration.MiniPlayerType
 import com.exco.player.configuration.PlayerConfiguration
 
 object TestConfiguration {
@@ -12,6 +11,7 @@ object TestConfiguration {
     private const val TEST_APP_VERSION = "1.0.0"
     private const val TEST_DEVICE_ID = "85958-5019f3a2-76f8"
     private const val TEST_IFA = "8a9f3a276f88a9f3a276f8"
+    private val TEST_MINI_PLAYER_CONFIG = MiniPlayerConfiguration()
 
     /**
      * Test configuration for use in testing scenarios.
@@ -24,6 +24,6 @@ object TestConfiguration {
         appVersion = TEST_APP_VERSION,
         deviceId = TEST_DEVICE_ID,
         ifa = TEST_IFA,
-        miniPlayerConfiguration = MiniPlayerConfiguration()
+        miniPlayerConfiguration = TEST_MINI_PLAYER_CONFIG
     )
 }

@@ -2,7 +2,7 @@ package com.exco.hostapp.integration
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.exco.hosttapp.integration.databinding.ActivityMainBinding
+import com.exco.hostapp.integration.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

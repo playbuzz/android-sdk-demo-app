@@ -5,7 +5,6 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -39,16 +38,16 @@ import androidx.compose.ui.unit.sp
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.exco.hostapp.integration.fragments.views.TopNavigation
+import com.exco.hostapp.integration.R
+import com.exco.hostapp.integration.fragments.composables.TopNavigation
 import com.exco.hostapp.integration.theme.MyApplicationTheme
 import com.exco.hostapp.integration.util.Constants
-import com.exco.hosttapp.integration.R
+import com.exco.hostapp.integration.util.IfaUtils
+import com.exco.hostapp.integration.util.UiMethod
 import com.exco.player.configuration.MiniPlayerConfiguration
 import com.exco.player.configuration.PlayerConfiguration
 
 class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configuration) {
-
-    private val navController by lazy { findNavController() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -66,12 +65,19 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
+            val uiMethod = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                requireArguments().getSerializable(Constants.UI_METHOD, UiMethod::class.java)
+            } else {
+                @Suppress("DEPRECATION")
+                requireArguments().getSerializable(Constants.CONFIG_BUNDLE_KEY)
+            } as UiMethod
+
             var playerId by rememberSaveable { mutableStateOf(TestConfiguration.configuration.playerId) }
-            var appCategory by rememberSaveable { mutableStateOf<String?>(null) }
-            var appStoreId by rememberSaveable { mutableStateOf<String?>(null) }
-            var appStoreUrl by rememberSaveable { mutableStateOf<String?>(null) }
-            var appVersion by rememberSaveable { mutableStateOf<String?>(null) }
-            var appDevices by rememberSaveable{ mutableStateOf<String?>(null) }
+            var appCategory by rememberSaveable { mutableStateOf("") }
+            var appStoreId by rememberSaveable { mutableStateOf("") }
+            var appStoreUrl by rememberSaveable { mutableStateOf("") }
+            var appVersion by rememberSaveable { mutableStateOf("") }
+            var appDevices by rememberSaveable { mutableStateOf("") }
             var ifa by rememberSaveable { mutableStateOf(IfaUtils.ifa) }
 
             Column(
@@ -80,39 +86,33 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                 modifier = Modifier.fillMaxSize()
             ) {
                 TopNavigation(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(56.dp)
-                        .background(Color(0xFF12339A))
-                    ,
-                    screenName = "Mini Player Configuration",
-                    navController = navController
+                    screenName = "Player Configuration",
+                    navController = findNavController()
                 )
                 LazyColumn(
-                    modifier = Modifier.padding(start = 16.dp,top = 12.dp,end = 16.dp)
-                ){
+                    modifier = Modifier.padding(start = 16.dp, top = 12.dp, end = 16.dp)
+                ) {
                     item {
                         InputCard(
-                            "AppName",
-                            "AppName",
-                            getApplicationName(LocalContext.current.applicationContext),
-                            true
-                        ) {}
+                            inputName = "AppName",
+                            inputTip = "AppName",
+                            inputText = getApplicationName(LocalContext.current.applicationContext),
+                            readOnly = true
+                        )
                     }
                     item {
                         InputCard(
-                            "AppBundle",
-                            "AppBundle",
-                            context?.packageName ?: "AppBundle",
-                            true
-                        ) {}
+                            inputName = "AppBundle",
+                            inputTip = "AppBundle",
+                            inputText = context?.packageName ?: "AppBundle",
+                            readOnly = true
+                        )
                     }
                     item {
                         InputCard(
-                            "PlayerId",
-                            "Enter your unique player ID",
-                            playerId,
-                            false
+                            inputName = "PlayerId",
+                            inputTip = "Enter your unique player ID",
+                            inputText = playerId
                         ) {
                             playerId = it
                         }
@@ -121,8 +121,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                         InputCard(
                             "App category",
                             "Select your app's category",
-                            appCategory,
-                            false
+                            appCategory
                         ) {
                             appCategory = it
                         }
@@ -131,8 +130,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                         InputCard(
                             "App Store ID",
                             "Enter your app's store id",
-                            appStoreId,
-                            false
+                            appStoreId
                         ) {
                             appStoreId = it
                         }
@@ -141,8 +139,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                         InputCard(
                             "App Store URL",
                             "Enter your app's store url",
-                            appStoreUrl,
-                            false
+                            appStoreUrl
                         ) {
                             appStoreUrl = it
                         }
@@ -151,8 +148,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                         InputCard(
                             "App Version",
                             "Enter your app's version number",
-                            appVersion,
-                            false
+                            appVersion
                         ) {
                             appVersion = it
                         }
@@ -161,8 +157,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                         InputCard(
                             "App Devices",
                             "Select supporter devices",
-                            appDevices,
-                            false
+                            appDevices
                         ) {
                             appDevices = it
                         }
@@ -171,8 +166,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                         InputCard(
                             "IFA",
                             "Enter your IFA",
-                            ifa,
-                            false
+                            ifa
                         ) {
                             ifa = it
                         }
@@ -192,10 +186,21 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                                     isProgrammatic = false
                                 )
 
-                                navController.navigate(
-                                    R.id.action_configurationFragmentCompose_to_uiMethodFragment,
-                                    bundleOf(Constants.CONFIG_BUNDLE_KEY to configurations)
-                                )
+                                val args = bundleOf(Constants.CONFIG_BUNDLE_KEY to configurations)
+
+                                val navId = when (uiMethod) {
+                                    UiMethod.ScrollView -> {
+                                        R.id.configFragmentToPlayerFragmentWithScroll
+                                    }
+                                    UiMethod.RecyclerView -> {
+                                        R.id.configFragmentToPlayerFragmentWithRecycler
+                                    }
+                                    UiMethod.Compose -> {
+                                        R.id.configFragmentToComposePlayerWithScroll
+                                    }
+                                }
+
+                                findNavController().navigate(navId, args)
                             },
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -229,12 +234,12 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
 
     @Composable
     private fun InputCard(
-        inputName:String,
-        inputTip:String,
-        inputText: String?,
-        readOnly:Boolean,
-        changeValue:(String) -> Unit
-    ){
+        inputName: String,
+        inputTip: String,
+        inputText: String,
+        readOnly: Boolean = false,
+        changeValue: (String) -> Unit = {}
+    ) {
         Column(modifier = Modifier.padding(top = 20.dp)) {
             Text(
                 text = inputName,
@@ -245,7 +250,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                 fontWeight = FontWeight.W500,
             )
             OutlinedTextField(
-                value = inputText.orEmpty(),
+                value = inputText,
                 onValueChange = {
                     changeValue(it)
                 },
@@ -256,7 +261,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                         inputTip,
                         color = Color(0xFFACACAC)
                     )
-                              },
+                },
                 modifier = Modifier
                     .padding(top = 8.dp)
                     .fillMaxWidth()
@@ -273,14 +278,15 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
             )
         }
     }
-    private fun getApplicationName(context:Context): String {
+
+    private fun getApplicationName(context: Context): String {
         val packageName = context.packageName
         val packageManager = context.packageManager
 
         return try {
-            val isHigherThanVersion33 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+            val tiramisuOrHigher = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 
-            val applicationInfo = if (isHigherThanVersion33) {
+            val applicationInfo = if (tiramisuOrHigher) {
                 packageManager.getApplicationInfo(
                     packageName,
                     PackageManager.ApplicationInfoFlags.of(0)

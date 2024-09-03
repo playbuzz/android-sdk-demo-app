@@ -3,9 +3,6 @@ pluginManagement {
         mavenCentral()
         google()
         maven(url = "https://plugins.gradle.org/m2/")
-        maven {
-            url = uri("https://exco1.jfrog.io/artifactory/android-gradle-release/")
-        }
     }
 }
 
@@ -15,9 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
         google()
         maven(url = "https://plugins.gradle.org/m2/")
-        maven {
-            url = uri("https://exco1.jfrog.io/artifactory/android-gradle-release/")
-        }
+        maven(url = "https://exco1.jfrog.io/artifactory/android-gradle-release/")
         mavenLocal()
     }
 }

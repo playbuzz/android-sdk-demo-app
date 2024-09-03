@@ -1,57 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/uiMethodFragment">
 
     <fragment
         android:id="@+id/uiMethodFragment"
         android:name="com.exco.hostapp.integration.fragments.UIMethodFragment"
         android:label="UIMethodFragment" >
         <action
-            android:id="@+id/action_uiMethodFragment_to_playerFragmentWithScroll"
-            app:destination="@id/playerFragmentWithScroll" />
-        <action
-            android:id="@+id/action_uiMethodFragment_to_composePlayerWithScroll"
-            app:destination="@id/composePlayerWithScroll" />
-        <action
-            android:id="@+id/action_uiMethodFragment_to_playerFragmentWithRecycler"
-            app:destination="@id/playerFragmentWithRecycler" />
+            android:id="@+id/toConfigOptionFragment"
+            app:destination="@id/configOptionFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/playerFragmentWithScroll"
         android:name="com.exco.hostapp.integration.fragments.PlayerFragmentWithScroll"
-        android:label="PlayerFragmentWithScroll" />
+        android:label="PlayerFragmentWithScroll">
+        <argument
+            android:name="configurations"
+            app:argType="com.exco.player.configuration.PlayerConfiguration"
+            app:nullable="true"/>
+    </fragment>
 
     <fragment
         android:id="@+id/composePlayerWithScroll"
         android:name="com.exco.hostapp.integration.fragments.ComposePlayerWithScroll"
-        android:label="ComposePlayerWithScroll" />
+        android:label="ComposePlayerWithScroll">
+        <argument
+            android:name="configurations"
+            app:argType="com.exco.player.configuration.PlayerConfiguration"
+            app:nullable="true"/>
+    </fragment>
 
     <fragment
         android:id="@+id/configurationFragmentCompose"
         android:name="com.exco.hostapp.integration.fragments.ConfigurationFragmentCompose"
         android:label="ConfigurationFragmentCompose" >
         <action
-            android:id="@+id/action_configurationFragmentCompose_to_uiMethodFragment"
-            app:destination="@id/uiMethodFragment" />
+            android:id="@+id/configFragmentToComposePlayerWithScroll"
+            app:destination="@id/composePlayerWithScroll" />
+        <action
+            android:id="@+id/configFragmentToPlayerFragmentWithScroll"
+            app:destination="@id/playerFragmentWithScroll" />
+        <action
+            android:id="@+id/configFragmentToPlayerFragmentWithRecycler"
+            app:destination="@id/playerFragmentWithRecycler" />
+        <argument
+            android:name="ui_method"
+            app:argType="com.exco.hostapp.integration.util.UiMethod"
+            app:nullable="false"/>
     </fragment>
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.exco.hostapp.integration.fragments.HomeFragment"
-        android:label="HomeFragment" >
+        android:id="@+id/configOptionFragment"
+        android:name="com.exco.hostapp.integration.fragments.ConfigOptionFragment"
+        android:label="ConfigOptionFragment" >
         <action
-            android:id="@+id/action_homeFragment_to_uiMethodFragment"
-            app:destination="@id/uiMethodFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_configurationFragmentCompose"
+            android:id="@+id/toConfigurationFragment"
             app:destination="@id/configurationFragmentCompose" />
+        <action
+            android:id="@+id/configOptionFragmentToComposePlayerWithScroll"
+            app:destination="@id/composePlayerWithScroll" />
+        <action
+            android:id="@+id/configOptionFragmentToPlayerFragmentWithScroll"
+            app:destination="@id/playerFragmentWithScroll" />
+        <action
+            android:id="@+id/configOptionFragmentToPlayerFragmentWithRecycler"
+            app:destination="@id/playerFragmentWithRecycler" />
+        <argument
+            android:name="ui_method"
+            app:argType="com.exco.hostapp.integration.util.UiMethod"
+            app:nullable="false"/>
     </fragment>
     <fragment
         android:id="@+id/playerFragmentWithRecycler"
         android:name="com.exco.hostapp.integration.fragments.recycler.PlayerFragmentWithRecycler"
-        android:label="PlayerFragmentWithRecycler" />
+        android:label="PlayerFragmentWithRecycler">
+        <argument
+            android:name="configurations"
+            app:argType="com.exco.player.configuration.PlayerConfiguration"
+            app:nullable="true"/>
+    </fragment>
 </navigation>

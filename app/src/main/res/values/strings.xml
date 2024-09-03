@@ -14,5 +14,7 @@
     <string name="load_player" translatable="false">Load Player</string>
     <string name="button_back" translatable="false">Back Button</string>
     <string name="test" translatable="false">AppCategory\nAppCategory\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\A\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\ppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\AppCategory\nAppCategory\nAppCategory\nAppCategoryn\</string>
+    <string name="xml_recyclerview_screen">XML - RecyclerView Screen</string>
+    <string name="xml_scrollview_screen">XML - ScrollView Screen</string>
 
 </resources>
