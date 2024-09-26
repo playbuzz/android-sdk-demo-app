@@ -70,7 +70,7 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
         Card(
             modifier = modifier
                 .fillMaxSize()
-                .padding(top = 24.dp)
+                .padding(vertical = 24.dp)
                 .verticalScroll(rememberScrollState())
                 .shadow(
                     elevation = 32.dp,
@@ -109,6 +109,12 @@ class UIMethodFragment : Fragment(R.layout.fragment_ui_method) {
                 selectionAbout = "The screen will be created with Jetpack Compose UI"
             ) {
                 navigateForward(UiMethod.Compose)
+            }
+            UISelectionTypeCard(
+                selectionName = "Programmatic",
+                selectionAbout = "The screen will demonstrate ExCo player programmatic API"
+            ) {
+                navigateForward(UiMethod.Programmatic)
             }
         }
     }

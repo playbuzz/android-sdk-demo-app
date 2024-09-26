@@ -50,6 +50,9 @@
             android:name="ui_method"
             app:argType="com.exco.hostapp.integration.util.UiMethod"
             app:nullable="false"/>
+        <action
+            android:id="@+id/configFragmentToProgrammaticPlayerFragment"
+            app:destination="@id/programmaticPlayerFragment" />
     </fragment>
 
     <fragment
@@ -72,11 +75,23 @@
             android:name="ui_method"
             app:argType="com.exco.hostapp.integration.util.UiMethod"
             app:nullable="false"/>
+        <action
+            android:id="@+id/configOptionFragmentToProgrammaticPlayerFragment"
+            app:destination="@id/programmaticPlayerFragment" />
     </fragment>
     <fragment
         android:id="@+id/playerFragmentWithRecycler"
         android:name="com.exco.hostapp.integration.fragments.recycler.PlayerFragmentWithRecycler"
         android:label="PlayerFragmentWithRecycler">
+        <argument
+            android:name="configurations"
+            app:argType="com.exco.player.configuration.PlayerConfiguration"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/programmaticPlayerFragment"
+        android:name="com.exco.hostapp.integration.fragments.ProgrammaticPlayerFragment"
+        android:label="ProgrammaticPlayerFragment">
         <argument
             android:name="configurations"
             app:argType="com.exco.player.configuration.PlayerConfiguration"

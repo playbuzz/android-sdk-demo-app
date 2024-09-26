@@ -6,5 +6,5 @@ object Constants {
 }
 
 enum class UiMethod {
-    ScrollView, RecyclerView, Compose
+    ScrollView, RecyclerView, Compose, Programmatic
 }

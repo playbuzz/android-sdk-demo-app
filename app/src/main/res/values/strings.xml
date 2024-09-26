@@ -16,5 +16,11 @@
     <string name="test" translatable="false">AppCategory\nAppCategory\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\A\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\ppCategoryn\\nAppCategory\n\AppCategoryn\\nAppCategory\n\AppCategoryn\AppCategory\nAppCategory\nAppCategory\nAppCategoryn\</string>
     <string name="xml_recyclerview_screen">XML - RecyclerView Screen</string>
     <string name="xml_scrollview_screen">XML - ScrollView Screen</string>
-
+    <string name="set_index">Set Index</string>
+    <string name="index">Yout Index</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="destroy">Destroy</string>
+    <string name="initialize">Initialize</string>
+    <string name="programmatic_screen">Programmatic Screen</string>
 </resources>

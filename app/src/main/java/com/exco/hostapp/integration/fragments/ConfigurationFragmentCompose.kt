@@ -183,7 +183,7 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                                     deviceId = appDevices,
                                     ifa = ifa,
                                     miniPlayerConfiguration = MiniPlayerConfiguration(),
-                                    isProgrammatic = false
+                                    isProgrammatic = uiMethod == UiMethod.Programmatic
                                 )
 
                                 val args = bundleOf(Constants.CONFIG_BUNDLE_KEY to configurations)
@@ -197,6 +197,9 @@ class ConfigurationFragmentCompose : Fragment(R.layout.fragment_compose_configur
                                     }
                                     UiMethod.Compose -> {
                                         R.id.configFragmentToComposePlayerWithScroll
+                                    }
+                                    UiMethod.Programmatic -> {
+                                        R.id.configFragmentToProgrammaticPlayerFragment
                                     }
                                 }
 

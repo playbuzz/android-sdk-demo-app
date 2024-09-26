@@ -4,7 +4,7 @@ import com.exco.player.configuration.MiniPlayerConfiguration
 import com.exco.player.configuration.PlayerConfiguration
 
 object TestConfiguration {
-    private const val TEST_PLAYER_ID = "aa78396a-933d-4c5a-b22a-af451047961c"
+    private const val TEST_PLAYER_ID = "8bd39116-eacb-4b4e-a160-bedd5d71ce1c"
     private const val TEST_APP_CATEGORY = "Sport"
     private const val TEST_APP_STORE_ID = "512412"
     private const val TEST_APP_STORE_URL = "https://test_app_store_url"
@@ -26,4 +26,6 @@ object TestConfiguration {
         ifa = TEST_IFA,
         miniPlayerConfiguration = TEST_MINI_PLAYER_CONFIG
     )
+
+    val programmaticConfiguration = configuration.copy(isProgrammatic = true)
 }

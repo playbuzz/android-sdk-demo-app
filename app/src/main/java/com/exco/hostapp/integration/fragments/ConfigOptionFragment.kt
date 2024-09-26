@@ -114,6 +114,9 @@ class ConfigOptionFragment : Fragment(R.layout.fragment_home) {
                     UiMethod.Compose -> {
                         findNavController().navigate(R.id.configOptionFragmentToComposePlayerWithScroll)
                     }
+                    UiMethod.Programmatic -> {
+                        findNavController().navigate(R.id.configOptionFragmentToProgrammaticPlayerFragment)
+                    }
                 }
             }
             UISelectionTypeCard(
