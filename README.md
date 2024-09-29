@@ -174,7 +174,8 @@ fun ComposeExCoPlayerView(configuration: PlayerConfiguration) {
 - **The player will start playing right after view recomposition**.
 
 ## RecyclerView support
-RecyclerView manages it's views differently which causes different lifecycle events for the view to be triggered differently
+RecyclerView manages it's views differently which causes different lifecycle events for the view to be triggered at different times
+
 We have created a custom Adapter and ViewHolder classes to encapsulate the adjustments needed without the developer
 having to worry about it, for example:
 ```kotlin
