@@ -97,6 +97,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
 
-    implementation("com.exco:player:2.0.9")
+    implementation("com.exco:player:2.1.0")
     implementation("com.exco:omsdk-android:1.4.8")
 }

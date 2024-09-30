@@ -31,7 +31,7 @@ dependencyResolutionManagement {
 implementation("com.exco:player:$versionOfSDK")
 implementation("com.exco:omsdk-android:1.4.8")
 ```
-- **The current version of sdk is 2.0.9**
+- **The current version of sdk is 2.1.0**
 
 
 - **Usage - SDK activation**
@@ -270,6 +270,22 @@ With these item layouts:
   more than one player in a single item is not supported automatically!
 - In case no `ExCoPlayerView` instances were found, an `IllegalStateException` will be thrown
 
+### Manual RecyclerView Lifecycle Management
+In cases of more complex app architecture, it is also possible to manage the view lifecycle manually, that means
+that as a developer you don't need to use the `ExCoAdapter` and `ExCoViewHolder` but would make the developer
+responsible for calling the lifecycle methods himself, in order to explain this we need to understand two different lifecycle event:
+- View is attached/detached to/from the window, it was added to the `RecyclerView` to manage
+- View is attached/detached to/from the `RecyclerView`, it is part of the `RecyclerView` data but is currently shown/not shown on screen
+  (for example the view was scrolled off screen)
+
+That means the developer is responsible for calling the following methods:
+- Call `ExCoPlayerView#playerAttachedToWindow()` whenever the view is attached to the window
+- Call `ExCoPlayerView#playerDetachedFromWindow()` whenever the view is detached to the window
+- Call `ExCoPlayerView#attachedToRecyclerView()` whenever the view is attached to your `RecyclerView`
+- Call `ExCoPlyerView#detachedFromRecyclerView()` whenever the view is detached from your `RecyclerView`
+
+Note: The source code for `ExCoAdapter` is public and can be referenced by developers to see how/when this methods should be called
+
 ## SDK Callbacks
 - **To get a callback from ExCoPlayerView you can work with ExCoPlayerDelegate and ExCoErrorDelegate**.
 ### ExCoPlayerDelegate
@@ -293,9 +309,9 @@ To begin working with the programmatic API, set isProgrammatic to true in your c
 **Example**:
 ```kotlin
     val mockConfiguration = PlayerConfiguration(
-      playerId = "8bd33116-eacd-4b4e-a150-bedd4d71ce1c",
-      isProgrammatic = true
-    )
+  playerId = "8bd33116-eacd-4b4e-a150-bedd4d71ce1c",
+  isProgrammatic = true
+)
   ```
 
 **There is a ConfigurationOptions object to work with to setup your configuration:**
@@ -316,28 +332,28 @@ data class PlaylistItem(
 )
 
 data class ContentVideoSettings(
-    val playFirst: List<PlaylistItem>?,        //Optional
-    val replacePlaylist: Boolean?,             //Optional
-    val tags: List<String>?,                   //Optional
-    val playlistId: String?,                   //Optional
-    val playlist: List<PlaylistItem>?,         //Optional
-    val playlistIndex: Int?,                   //Optional
-    val customParams: Map<String,Any>?         //Optional
+  val playFirst: List<PlaylistItem>?,        //Optional
+  val replacePlaylist: Boolean?,             //Optional
+  val tags: List<String>?,                   //Optional
+  val playlistId: String?,                   //Optional
+  val playlist: List<PlaylistItem>?,         //Optional
+  val playlistIndex: Int?,                   //Optional
+  val customParams: Map<String,Any>?         //Optional
 )
 
 enum class PlaybackMode(val value: String) {
-    CLICK_TO_PLAY("click-to-play"),
-    AUTO_PLAY("auto-play"),
-    PLAY_IN_VIEW("play-in-view")
+  CLICK_TO_PLAY("click-to-play"),
+  AUTO_PLAY("auto-play"),
+  PLAY_IN_VIEW("play-in-view")
 }
-  
+
 data class ConfigurationOptions(
-    val playbackMode: PlaybackMode?,           //Optional
-    val autoPlay: Boolean?,                    //Optional
-    val mute: Boolean?,                        //Optional
-    val showAds: Boolean?,                     //Optional
-    val customParams: Map<String,Any>?,        //Optional
-    val content: ContentVideoSettings?,        //Optional
+  val playbackMode: PlaybackMode?,           //Optional
+  val autoPlay: Boolean?,                    //Optional
+  val mute: Boolean?,                        //Optional
+  val showAds: Boolean?,                     //Optional
+  val customParams: Map<String,Any>?,        //Optional
+  val content: ContentVideoSettings?,        //Optional
 )
   ```
 
@@ -350,34 +366,34 @@ fun init(configurationOptionsObject: ConfigurationOptions?)
 **Example**:
 ```kotlin
 val config = ConfigurationOptions(
-    playbackMode = PlaybackMode.CLICK_TO_PLAY,
-    autoPlay = false,
-    mute = false,
-    showAds = true,
-    customParams = mapOf("customColor" to "red"),
-    content = ContentVideoSettings(
-        playFirst = listOf(
-            PlaylistItem(
-                id = "fa375-264b-4a86-809c-bbfc191532c1",
-                src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
-            ),
-            PlaylistItem(
-                id = "fa375-264b-4a86-809c-bbfc191532c2",
-                src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
-            )
-        ),
-        tags = listOf("Sport","Cinema"),
-        playlist = listOf(
-            PlaylistItem(
-                id = "fa375-264b-4a86-809c-bbfc191532c1",
-                src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
-            ),
-            PlaylistItem(
-                id = "fa375-264b-4a86-809c-bbfc191532c2",
-                src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
-            )
-        )
+  playbackMode = PlaybackMode.CLICK_TO_PLAY,
+  autoPlay = false,
+  mute = false,
+  showAds = true,
+  customParams = mapOf("customColor" to "red"),
+  content = ContentVideoSettings(
+    playFirst = listOf(
+      PlaylistItem(
+        id = "fa375-264b-4a86-809c-bbfc191532c1",
+        src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
+      ),
+      PlaylistItem(
+        id = "fa375-264b-4a86-809c-bbfc191532c2",
+        src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
+      )
+    ),
+    tags = listOf("Sport","Cinema"),
+    playlist = listOf(
+      PlaylistItem(
+        id = "fa375-264b-4a86-809c-bbfc191532c1",
+        src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
+      ),
+      PlaylistItem(
+        id = "fa375-264b-4a86-809c-bbfc191532c2",
+        src = "https://mcd.ex.co/video/upload/v1490095101/landscape7a6fa375-264b-4a86-809c-bbfc191532c1.mp4"
+      )
     )
+  )
 )
 
 binding.player.init(config)
@@ -387,13 +403,13 @@ After you initialize the player with player configurationOptions you can start t
 There is a list of possible methods:
 ```kotlin
     fun play()
-    fun pause()
-    fun getPlaylistIndex(callback: (Int) -> Unit)
-    fun getContentPosition(callback: (Float) -> Unit)
-    fun getPlaylistItem(callback: (PlaylistItem) -> Unit)
-    fun setPlaylistIndex(playlistIndex: Int)
-    fun addPlaylistItem(playlistItems: List<PlaylistItem>,insertAtIndex: Int)
-    fun destroy()
+fun pause()
+fun getPlaylistIndex(callback: (Int) -> Unit)
+fun getContentPosition(callback: (Float) -> Unit)
+fun getPlaylistItem(callback: (PlaylistItem) -> Unit)
+fun setPlaylistIndex(playlistIndex: Int)
+fun addPlaylistItem(playlistItems: List<PlaylistItem>,insertAtIndex: Int)
+fun destroy()
   ```
 
 ### Api Usage Example
@@ -444,7 +460,7 @@ destroy.setOnClickListener {
 
 ## Version
 
-The current version of sdk is 2.0.7
+The current version of sdk is 2.1.0
 
 ## License
 This project is licensed under the [License Name] - see the LICENSE.md file for details.
